@@ -7,21 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F1C5BAF1DD8A62700B8689E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1C5BAE1DD8A62700B8689E /* MainViewController.swift */; };
+		2F1C5BB11DD8A6DC00B8689E /* AddEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1C5BB01DD8A6DC00B8689E /* AddEventViewController.swift */; };
+		2F1C5BB31DD8ADBB00B8689E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1C5BB21DD8ADBB00B8689E /* LoginViewController.swift */; };
+		2F1C5BB51DDA049700B8689E /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1C5BB41DDA049700B8689E /* Config.swift */; };
 		2FD185A71DBF0A3E0014274B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD185A61DBF0A3E0014274B /* AppDelegate.swift */; };
-		2FD185A91DBF0A3E0014274B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD185A81DBF0A3E0014274B /* ViewController.swift */; };
 		2FD185AC1DBF0A3E0014274B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FD185AA1DBF0A3E0014274B /* Main.storyboard */; };
 		2FD185AE1DBF0A3E0014274B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FD185AD1DBF0A3E0014274B /* Assets.xcassets */; };
 		2FD185B11DBF0A3E0014274B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FD185AF1DBF0A3E0014274B /* LaunchScreen.storyboard */; };
+		ED74E48967888CE200FBDDC1 /* Pods_Mathilda.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60316FC5DF31D369A0D82F6C /* Pods_Mathilda.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2F1C5BAE1DD8A62700B8689E /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		2F1C5BB01DD8A6DC00B8689E /* AddEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddEventViewController.swift; sourceTree = "<group>"; };
+		2F1C5BB21DD8ADBB00B8689E /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		2F1C5BB41DDA049700B8689E /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		2FD185A31DBF0A3D0014274B /* Mathilda.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mathilda.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FD185A61DBF0A3E0014274B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2FD185A81DBF0A3E0014274B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2FD185AB1DBF0A3E0014274B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2FD185AD1DBF0A3E0014274B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2FD185B01DBF0A3E0014274B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2FD185B21DBF0A3E0014274B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		60316FC5DF31D369A0D82F6C /* Pods_Mathilda.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mathilda.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A693C40C7AE4E122292F47E /* Pods-Mathilda.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mathilda.release.xcconfig"; path = "Pods/Target Support Files/Pods-Mathilda/Pods-Mathilda.release.xcconfig"; sourceTree = "<group>"; };
+		F836E6C474BF8BDA1A86FB2F /* Pods-Mathilda.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mathilda.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Mathilda/Pods-Mathilda.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED74E48967888CE200FBDDC1 /* Pods_Mathilda.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +51,8 @@
 			children = (
 				2FD185A51DBF0A3D0014274B /* Mathilda */,
 				2FD185A41DBF0A3D0014274B /* Products */,
+				E3824FDB3AD9AAA9F86E2657 /* Pods */,
+				A711AFBBFAA4B0B09FFB2C83 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,13 +68,33 @@
 			isa = PBXGroup;
 			children = (
 				2FD185A61DBF0A3E0014274B /* AppDelegate.swift */,
-				2FD185A81DBF0A3E0014274B /* ViewController.swift */,
+				2F1C5BAE1DD8A62700B8689E /* MainViewController.swift */,
+				2F1C5BB21DD8ADBB00B8689E /* LoginViewController.swift */,
+				2F1C5BB41DDA049700B8689E /* Config.swift */,
+				2F1C5BB01DD8A6DC00B8689E /* AddEventViewController.swift */,
 				2FD185AA1DBF0A3E0014274B /* Main.storyboard */,
 				2FD185AD1DBF0A3E0014274B /* Assets.xcassets */,
 				2FD185AF1DBF0A3E0014274B /* LaunchScreen.storyboard */,
 				2FD185B21DBF0A3E0014274B /* Info.plist */,
 			);
 			path = Mathilda;
+			sourceTree = "<group>";
+		};
+		A711AFBBFAA4B0B09FFB2C83 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				60316FC5DF31D369A0D82F6C /* Pods_Mathilda.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E3824FDB3AD9AAA9F86E2657 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F836E6C474BF8BDA1A86FB2F /* Pods-Mathilda.debug.xcconfig */,
+				6A693C40C7AE4E122292F47E /* Pods-Mathilda.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +104,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2FD185B51DBF0A3E0014274B /* Build configuration list for PBXNativeTarget "Mathilda" */;
 			buildPhases = (
+				C962ACC631AB659E0D0CDC65 /* [CP] Check Pods Manifest.lock */,
 				2FD1859F1DBF0A3D0014274B /* Sources */,
 				2FD185A01DBF0A3D0014274B /* Frameworks */,
 				2FD185A11DBF0A3D0014274B /* Resources */,
+				FDA347DB2809F52FB03D8B39 /* [CP] Embed Pods Frameworks */,
+				EB3FC529CA38FBF88771FBE5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -97,6 +133,7 @@
 					2FD185A21DBF0A3D0014274B = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = G4WT85FFHH;
+						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -132,13 +169,64 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		C962ACC631AB659E0D0CDC65 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EB3FC529CA38FBF88771FBE5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Mathilda/Pods-Mathilda-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FDA347DB2809F52FB03D8B39 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Mathilda/Pods-Mathilda-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2FD1859F1DBF0A3D0014274B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2FD185A91DBF0A3E0014274B /* ViewController.swift in Sources */,
+				2F1C5BB31DD8ADBB00B8689E /* LoginViewController.swift in Sources */,
+				2F1C5BAF1DD8A62700B8689E /* MainViewController.swift in Sources */,
+				2F1C5BB51DDA049700B8689E /* Config.swift in Sources */,
 				2FD185A71DBF0A3E0014274B /* AppDelegate.swift in Sources */,
+				2F1C5BB11DD8A6DC00B8689E /* AddEventViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,26 +345,33 @@
 		};
 		2FD185B61DBF0A3E0014274B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F836E6C474BF8BDA1A86FB2F /* Pods-Mathilda.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = G4WT85FFHH;
 				INFOPLIST_FILE = Mathilda/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.edu.TongjiAppleClub.Mathilda;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		2FD185B71DBF0A3E0014274B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6A693C40C7AE4E122292F47E /* Pods-Mathilda.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = G4WT85FFHH;
 				INFOPLIST_FILE = Mathilda/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.edu.TongjiAppleClub.Mathilda;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

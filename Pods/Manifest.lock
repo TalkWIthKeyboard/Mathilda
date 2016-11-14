@@ -1,0 +1,21 @@
+PODS:
+  - Alamofire (4.0.1)
+  - MBProgressHUD (1.0.0)
+  - SDCAlertView (7.1)
+  - SwiftyJSON (3.1.1)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.0)
+  - MBProgressHUD (~> 1.0.0)
+  - SDCAlertView (~> 7.1)
+  - SwiftyJSON
+
+SPEC CHECKSUMS:
+  Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
+  MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
+  SDCAlertView: b92fd1f00e522e18a062005e15a16c1e8295c5b5
+  SwiftyJSON: f0be2e604f83e8405a624e9f891898bf6ed4e019
+
+PODFILE CHECKSUM: 6a1b3cf44bd3eb5854e6592b486afa785aa27038
+
+COCOAPODS: 1.1.1

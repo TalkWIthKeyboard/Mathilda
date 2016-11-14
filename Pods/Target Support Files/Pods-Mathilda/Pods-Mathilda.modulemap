@@ -1,0 +1,6 @@
+framework module Pods_Mathilda {
+  umbrella header "Pods-Mathilda-umbrella.h"
+
+  export *
+  module * { export * }
+}
