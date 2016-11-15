@@ -12,7 +12,7 @@ import SwiftyJSON
 import SDCAlertView
 import MBProgressHUD
 
-class LoginViewController: UIViewController, UITextFieldDelegate {
+class LoginViewController: UIViewController, UITextFieldDelegate, UITextViewDelegate {
     
     @IBOutlet weak var account: UITextField!
     @IBOutlet weak var password: UITextField!
@@ -27,27 +27,26 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         Alamofire.request("http://115.159.1.222:3000/mng/user/login", method: .post, parameters: userParameters).responseString { (response) in
             let responseData = response.result.value!
             let responseJson = JSON(data: responseData.data(using: String.Encoding.utf8, allowLossyConversion: false)!)
-            print(responseJson)
+//            print(responseJson)
             
             switch responseJson["number"].stringValue {
-            case "200":
-                //  print("操作成功完成")
+            case (ERROR_INFO["SUCCESS"]?["number"])!:
                 let hud = MBProgressHUD.showAdded(to: self.view, animated: true)
                 hud.label.text = "登录中..."
-            case "401":
-                let alert = AlertController(title: "登录失败", message: "未输入用户名或密码", preferredStyle: .alert)
+            case (ERROR_INFO["REQUEST_ERR"]?["number"])!:
+                let alert = AlertController(title: "登录失败", message: "请输入用户名或密码", preferredStyle: .alert)
                 alert.add(AlertAction(title: "确定", style: .preferred))
                 alert.present()
-            case "300":
+            case (ERROR_INFO["PASSWD_ERR"]?["number"])!:
                 let alert = AlertController(title: "登录失败", message: "用户名或密码错误，请重新输入", preferredStyle: .alert)
                 alert.add(AlertAction(title: "确定", style: .preferred))
                 alert.present()
-            case "301":
+            case (ERROR_INFO["USER_ERR"]?["number"])!:
                 let alert = AlertController(title: "登录失败", message: "不存在此用户", preferredStyle: .alert)
                 alert.add(AlertAction(title: "确定", style: .preferred))
                 alert.present()
             default:
-                print("其他错误")
+                print("其他错误：" + responseJson["value"].stringValue)
                 print("错误代码：" + responseJson["number"].stringValue)
             }
             
@@ -59,19 +58,28 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         return textField.resignFirstResponder()
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        resignFirstResponder()
+        for subView in self.view.subviews {
+            if subView.isKind(of: UITextField.self) {
+                subView.resignFirstResponder()
+            }
+        }
+    }
+    
     @IBAction func wechatLogin(_ sender: UIButton) {
         print("wechat login")
-        // to do
+//        to do
     }
 
     @IBAction func qqLogin(_ sender: UIButton) {
         print("qq login")
-        // to do
+//        to do
     }
     
     @IBAction func weiboLogin(_ sender: UIButton) {
         print("weibo login")
-        // to do
+//        to do
     }
     
     
