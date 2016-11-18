@@ -11,6 +11,7 @@
 		2F1C5BB11DD8A6DC00B8689E /* AddEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1C5BB01DD8A6DC00B8689E /* AddEventViewController.swift */; };
 		2F1C5BB31DD8ADBB00B8689E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1C5BB21DD8ADBB00B8689E /* LoginViewController.swift */; };
 		2F1C5BB51DDA049700B8689E /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1C5BB41DDA049700B8689E /* Config.swift */; };
+		2F6ECEF81DDF4AE3007632A4 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6ECEF71DDF4AE3007632A4 /* RegisterViewController.swift */; };
 		2FD185A71DBF0A3E0014274B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD185A61DBF0A3E0014274B /* AppDelegate.swift */; };
 		2FD185AC1DBF0A3E0014274B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FD185AA1DBF0A3E0014274B /* Main.storyboard */; };
 		2FD185AE1DBF0A3E0014274B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FD185AD1DBF0A3E0014274B /* Assets.xcassets */; };
@@ -23,6 +24,7 @@
 		2F1C5BB01DD8A6DC00B8689E /* AddEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddEventViewController.swift; sourceTree = "<group>"; };
 		2F1C5BB21DD8ADBB00B8689E /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		2F1C5BB41DDA049700B8689E /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		2F6ECEF71DDF4AE3007632A4 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		2FD185A31DBF0A3D0014274B /* Mathilda.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mathilda.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FD185A61DBF0A3E0014274B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2FD185AB1DBF0A3E0014274B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 				2FD185A61DBF0A3E0014274B /* AppDelegate.swift */,
 				2F1C5BAE1DD8A62700B8689E /* MainViewController.swift */,
 				2F1C5BB21DD8ADBB00B8689E /* LoginViewController.swift */,
+				2F6ECEF71DDF4AE3007632A4 /* RegisterViewController.swift */,
 				2F1C5BB41DDA049700B8689E /* Config.swift */,
 				2F1C5BB01DD8A6DC00B8689E /* AddEventViewController.swift */,
 				2FD185AA1DBF0A3E0014274B /* Main.storyboard */,
@@ -225,6 +228,7 @@
 				2F1C5BB31DD8ADBB00B8689E /* LoginViewController.swift in Sources */,
 				2F1C5BAF1DD8A62700B8689E /* MainViewController.swift in Sources */,
 				2F1C5BB51DDA049700B8689E /* Config.swift in Sources */,
+				2F6ECEF81DDF4AE3007632A4 /* RegisterViewController.swift in Sources */,
 				2FD185A71DBF0A3E0014274B /* AppDelegate.swift in Sources */,
 				2F1C5BB11DD8A6DC00B8689E /* AddEventViewController.swift in Sources */,
 			);

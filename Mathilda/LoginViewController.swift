@@ -16,6 +16,17 @@ class LoginViewController: UIViewController, UITextFieldDelegate, UITextViewDele
     
     @IBOutlet weak var account: UITextField!
     @IBOutlet weak var password: UITextField!
+    @IBOutlet weak var register: UIButton!
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        navigationController?.isNavigationBarHidden = true
+        
+        register.layer.cornerRadius = 5
+        register.layer.borderWidth = 1
+        register.layer.borderColor = UIColor(colorLiteralRed: 21/255, green: 126/255, blue: 251/255, alpha: 0.9).cgColor
+    }
     
     @IBAction func login(_ sender: UIButton) {
         
@@ -27,9 +38,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate, UITextViewDele
         Alamofire.request("http://115.159.1.222:3000/mng/user/login", method: .post, parameters: userParameters).responseString { (response) in
             let responseData = response.result.value!
             let responseJson = JSON(data: responseData.data(using: String.Encoding.utf8, allowLossyConversion: false)!)
-//            print(responseJson)
-            
-            switch responseJson["number"].stringValue {
+
+            switch responseJson["info"]["number"].stringValue {
             case (ERROR_INFO["SUCCESS"]?["number"])!:
                 let hud = MBProgressHUD.showAdded(to: self.view, animated: true)
                 hud.label.text = "登录中..."
