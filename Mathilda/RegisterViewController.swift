@@ -72,12 +72,13 @@ class RegisterViewController: UIViewController {
         Alamofire.request("http://115.159.1.222:3000/mng/user/register", method: .post, parameters: userRegParameters).responseString { (response) in
             let responseData = response.result.value!
             let responseJson = JSON(data: responseData.data(using: String.Encoding.utf8)!)
-            if responseJson["number"].stringValue == ERROR_INFO["ACCOUNT_ERR"]?["number"] {
+            if responseJson["info"]["number"].stringValue == ERROR_INFO["ACCOUNT_ERR"]?["number"] {
                 let alert = AlertController(title: "注册失败", message: "用户名已存在", preferredStyle: .alert)
                 alert.add(AlertAction(title: "确定", style: .preferred))
                 alert.present()
             }
-            if responseJson["number"].stringValue == ERROR_INFO["SUCCESS"]?["number"] {
+            print(responseJson)
+            if responseJson["info"]["number"].stringValue == ERROR_INFO["SUCCESS"]?["number"] {
                 let alert = AlertController(title: "注册成功", message: "恭喜", preferredStyle: .alert)
                 alert.add(AlertAction(title: "进入音乐之旅", style: .preferred))
                 alert.present()
