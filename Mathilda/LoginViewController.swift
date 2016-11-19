@@ -37,7 +37,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate, UITextViewDele
         
         Alamofire.request("http://115.159.1.222:3000/mng/user/login", method: .post, parameters: userParameters).responseString { (response) in
             let responseData = response.result.value!
-            let responseJson = JSON(data: responseData.data(using: String.Encoding.utf8, allowLossyConversion: false)!)
+            let responseJson = JSON(data: responseData.data(using: String.Encoding.utf8)!)
 
             switch responseJson["info"]["number"].stringValue {
             case (ERROR_INFO["SUCCESS"]?["number"])!:

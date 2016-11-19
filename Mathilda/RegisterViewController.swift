@@ -7,20 +7,30 @@
 //
 
 import UIKit
+import SDCAlertView
+import Alamofire
+import SwiftyJSON
 
 class RegisterViewController: UIViewController {
     @IBOutlet weak var register: UIButton!
+    @IBOutlet weak var account: UITextField!
+    @IBOutlet weak var username: UITextField!
+    @IBOutlet weak var password: UITextField!
+    @IBOutlet weak var passwordAgain: UITextField!
+    @IBOutlet weak var male: UIButton!
+    @IBOutlet weak var female: UIButton!
+    var sex: String = "male"
+
+    @IBAction func male(_ sender: UIButton) {
+        sender.setTitleColor(UIColor(colorLiteralRed: 49/255, green: 122/255, blue: 247/255, alpha: 1), for: .normal)
+        female.setTitleColor(UIColor.black, for: .normal)
+    }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    @IBAction func female(_ sender: UIButton) {
+        sender.setTitleColor(UIColor(colorLiteralRed: 49/255, green: 122/255, blue: 247/255, alpha: 1), for: .normal)
+        male.setTitleColor(UIColor.black, for: .normal)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -30,6 +40,50 @@ class RegisterViewController: UIViewController {
         register.layer.cornerRadius = 5
         register.layer.borderWidth = 1
         register.layer.borderColor = UIColor(colorLiteralRed: 21/255, green: 126/255, blue: 251/255, alpha: 0.9).cgColor
+        male.setTitleColor(UIColor(colorLiteralRed: 49/255, green: 122/255, blue: 247/255, alpha: 1), for: .normal)
+    }
+    
+    @IBAction func register(_ sender: UIButton) {
+        if (account.text == "") || (username.text == "") || (password.text == "") || (passwordAgain.text == "") {
+            let alert = AlertController(title: "注册失败", message: "信息不完整", preferredStyle: .alert)
+            alert.add(AlertAction(title: "确定", style: .preferred))
+            alert.present()
+            
+        }
+        if password.text != passwordAgain.text {
+            let alert = AlertController(title: "注册失败", message: "密码输入不一致", preferredStyle: .alert)
+            alert.add(AlertAction(title: "确定", style: .preferred))
+            alert.present()
+        }
+        
+        if female.currentTitleColor == UIColor(colorLiteralRed: 49/255, green: 122/255, blue: 247/255, alpha: 1){
+            sex = "female"
+        } else {
+            sex = "male"
+        }
+        
+        let userRegParameters: Parameters = [
+            "account": account.text!,
+            "username": username.text!,
+            "password": password.text!,
+            "sex": sex
+        ]
+        
+        Alamofire.request("http://115.159.1.222:3000/mng/user/register", method: .post, parameters: userRegParameters).responseString { (response) in
+            let responseData = response.result.value!
+            let responseJson = JSON(data: responseData.data(using: String.Encoding.utf8)!)
+            if responseJson["number"].stringValue == ERROR_INFO["ACCOUNT_ERR"]?["number"] {
+                let alert = AlertController(title: "注册失败", message: "用户名已存在", preferredStyle: .alert)
+                alert.add(AlertAction(title: "确定", style: .preferred))
+                alert.present()
+            }
+            if responseJson["number"].stringValue == ERROR_INFO["SUCCESS"]?["number"] {
+                let alert = AlertController(title: "注册成功", message: "恭喜", preferredStyle: .alert)
+                alert.add(AlertAction(title: "进入音乐之旅", style: .preferred))
+                alert.present()
+            }
+        }
+        
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
