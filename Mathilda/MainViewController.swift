@@ -14,6 +14,11 @@ class MainViewController: UITableViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        let userDefault = UserDefaults.standard
+        guard userDefault.bool(forKey: "isLogin") else {
+            self.performSegue(withIdentifier: "login", sender: nil)
+            return
+        }
     }
 
     override func didReceiveMemoryWarning() {

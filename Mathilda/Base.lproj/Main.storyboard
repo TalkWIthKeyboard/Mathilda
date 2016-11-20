@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2659" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="hYB-88-nCo">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2659" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="NR4-KU-bEG">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -47,6 +47,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="hYB-88-nCo" kind="presentation" identifier="login" id="bch-R8-vWy"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I7h-HK-1Eh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -126,10 +129,10 @@
             </objects>
             <point key="canvasLocation" x="3158" y="212"/>
         </scene>
-        <!--注册-->
+        <!--Register View Controller-->
         <scene sceneID="Q7t-Zi-fEM">
             <objects>
-                <viewController id="cWG-dI-arc" customClass="RegisterViewController" customModule="Mathilda" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="cWG-dI-arc" userLabel="Register View Controller" customClass="RegisterViewController" customModule="Mathilda" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="TF9-WJ-tzx"/>
                         <viewControllerLayoutGuide type="bottom" id="x2u-n7-VWO"/>
@@ -160,6 +163,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="cWG-dI-arc" id="qid-9m-ntq"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" alpha="0.80000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="密码" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bvm-BG-3aS">
                                 <rect key="frame" x="46" y="355" width="282" height="40"/>
@@ -170,6 +176,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="cWG-dI-arc" id="6ad-pf-qHC"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" alpha="0.80000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="确认密码" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MkJ-KK-5qc">
                                 <rect key="frame" x="46" y="403" width="282" height="40"/>
@@ -180,6 +189,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="cWG-dI-arc" id="yyk-5J-ZDI"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" alpha="0.80000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="账号" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qf7-ZU-Cl0">
                                 <rect key="frame" x="46" y="259" width="282" height="40"/>
@@ -190,6 +202,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="cWG-dI-arc" id="Vj9-1p-6h0"/>
+                                </connections>
                             </textField>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="AcY-Zi-jUE">
                                 <rect key="frame" x="128" y="459" width="118" height="48"/>

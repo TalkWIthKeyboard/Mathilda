@@ -7,18 +7,20 @@
 //
 
 import UIKit
-import SDCAlertView
 import Alamofire
 import SwiftyJSON
 
-class RegisterViewController: UIViewController {
+class RegisterViewController: UIViewController, UITextFieldDelegate, UITextViewDelegate {
     @IBOutlet weak var register: UIButton!
+    
     @IBOutlet weak var account: UITextField!
     @IBOutlet weak var username: UITextField!
     @IBOutlet weak var password: UITextField!
     @IBOutlet weak var passwordAgain: UITextField!
+    
     @IBOutlet weak var male: UIButton!
     @IBOutlet weak var female: UIButton!
+    
     var sex: String = "male"
 
     @IBAction func male(_ sender: UIButton) {
@@ -44,16 +46,36 @@ class RegisterViewController: UIViewController {
     }
     
     @IBAction func register(_ sender: UIButton) {
-        if (account.text == "") || (username.text == "") || (password.text == "") || (passwordAgain.text == "") {
-            let alert = AlertController(title: "注册失败", message: "信息不完整", preferredStyle: .alert)
-            alert.add(AlertAction(title: "确定", style: .preferred))
-            alert.present()
-            
+        let alertView = UIAlertController(title: "注册失败", message: "", preferredStyle: .alert)
+        alertView.addAction(UIAlertAction(title: "好", style: .default, handler: { (action) in
+            self.dismiss(animated: true, completion: nil)
+        }))
+        
+        guard account.text != "" else {
+            alertView.message = "请输入账号"
+            self.present(alertView, animated: true, completion: nil)
+            return
         }
-        if password.text != passwordAgain.text {
-            let alert = AlertController(title: "注册失败", message: "密码输入不一致", preferredStyle: .alert)
-            alert.add(AlertAction(title: "确定", style: .preferred))
-            alert.present()
+        guard username.text != "" else {
+            alertView.message = "请输入用户名"
+            self.present(alertView, animated: true, completion: nil)
+            return
+        }
+        guard password.text != "" else {
+            alertView.message = "请输入密码"
+            self.present(alertView, animated: true, completion: nil)
+            return
+        }
+        guard passwordAgain.text != "" else {
+            alertView.message = "请确认密码"
+            self.present(alertView, animated: true, completion: nil)
+            return
+        }
+        
+        guard password.text == passwordAgain.text else {
+            alertView.message = "密码输入不一致"
+            self.present(alertView, animated: true, completion: nil)
+            return
         }
         
         if female.currentTitleColor == UIColor(colorLiteralRed: 49/255, green: 122/255, blue: 247/255, alpha: 1){
@@ -72,18 +94,30 @@ class RegisterViewController: UIViewController {
         Alamofire.request("http://115.159.1.222:3000/mng/user/register", method: .post, parameters: userRegParameters).responseString { (response) in
             let responseData = response.result.value!
             let responseJson = JSON(data: responseData.data(using: String.Encoding.utf8)!)
-            if responseJson["info"]["number"].stringValue == ERROR_INFO["ACCOUNT_ERR"]?["number"] {
-                let alert = AlertController(title: "注册失败", message: "账号已存在", preferredStyle: .alert)
-                alert.add(AlertAction(title: "确定", style: .preferred))
-                alert.present()
+            guard responseJson["info"]["number"].stringValue != ERROR_INFO["ACCOUNT_ERR"]?["number"] else {
+                let alertView = UIAlertController(title: "注册失败", message: "", preferredStyle: .alert)
+                alertView.addAction(UIAlertAction(title: "好", style: .default, handler: { (action) in
+                    self.dismiss(animated: true, completion: nil)
+                }))
+                alertView.message = "账号已存在"
+                self.present(alertView, animated: true, completion: nil)
+                return
             }
             if responseJson["info"]["number"].stringValue == ERROR_INFO["SUCCESS"]?["number"] {
-                let alert = AlertController(title: "注册成功", message: "恭喜", preferredStyle: .alert)
-                alert.add(AlertAction(title: "进入音乐之旅", style: .preferred))
-                alert.present()
+                let alertView = UIAlertController(title: "注册成功", message: "恭喜", preferredStyle: .alert)
+                alertView.addAction(UIAlertAction(title: "开启音乐之旅", style: .default, handler: { (action) in
+                    self.dismiss(animated: true, completion: nil)
+                }))
+                self.present(alertView, animated: true, completion: nil)
             }
         }
+        if let loginViewController = (self.navigationController?.viewControllers[0]) as? LoginViewController {
+            loginViewController.account.text = self.account.text
+            loginViewController.password.text = self.password.text
+        }
         
+        _ = self.navigationController?.popViewController(animated: true)
+
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -100,7 +134,7 @@ class RegisterViewController: UIViewController {
     }
     
     @IBAction func popNavigation(_ sender: UIBarButtonItem) {
-        let _ = self.navigationController?.popViewController(animated: true)
+        _ = self.navigationController?.popViewController(animated: true)
     }
 
     /*

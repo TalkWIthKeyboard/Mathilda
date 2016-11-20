@@ -6,7 +6,6 @@ target 'Mathilda' do
   use_frameworks!
   pod 'Alamofire', '~> 4.0'
   pod 'SwiftyJSON'
-  pod 'SDCAlertView', '~> 7.1'
   pod 'MBProgressHUD', '~> 1.0.0'
   pod 'SnapKit', '~> 3.0.2'
   pod 'SwiftHEXColors'

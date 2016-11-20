@@ -1,7 +1,6 @@
 PODS:
   - Alamofire (4.1.0)
   - MBProgressHUD (1.0.0)
-  - SDCAlertView (7.1)
   - SnapKit (3.0.2)
   - SwiftHEXColors (1.1.0)
   - SwiftyJSON (3.1.3)
@@ -9,7 +8,6 @@ PODS:
 DEPENDENCIES:
   - Alamofire (~> 4.0)
   - MBProgressHUD (~> 1.0.0)
-  - SDCAlertView (~> 7.1)
   - SnapKit (~> 3.0.2)
   - SwiftHEXColors
   - SwiftyJSON
@@ -17,11 +15,10 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   Alamofire: e266cf991b933498df791e645e0d8ac294492153
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
-  SDCAlertView: b92fd1f00e522e18a062005e15a16c1e8295c5b5
   SnapKit: 2e456761aa92d4d4067a7a5594c18769d451a8ad
   SwiftHEXColors: 8f7e364df7929e32cff9f9eeb044bb215167d6be
   SwiftyJSON: 38a8ea2006779c0fc4c310cb2ee8195327740faf
 
-PODFILE CHECKSUM: ca09cf0648e2637696afd2cc4f5bd82c46a5e8ef
+PODFILE CHECKSUM: c9bd93373b2d3570cf4e9d79f478d106b40e5d9b
 
 COCOAPODS: 1.1.1
