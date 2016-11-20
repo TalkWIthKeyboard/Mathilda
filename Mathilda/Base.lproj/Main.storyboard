@@ -256,7 +256,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="注册" id="XL4-6Z-ixZ">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Kqe-a4-359"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Kqe-a4-359">
+                            <connections>
+                                <action selector="popNavigation:" destination="cWG-dI-arc" id="MM0-Tg-fGD"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="account" destination="qf7-ZU-Cl0" id="IB3-Ss-NT0"/>
@@ -442,7 +446,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2GE-4E-e6w" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1631.2" y="1072.7136431784108"/>
+            <point key="canvasLocation" x="1609" y="1073"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="P4W-mi-NxJ">

@@ -73,11 +73,10 @@ class RegisterViewController: UIViewController {
             let responseData = response.result.value!
             let responseJson = JSON(data: responseData.data(using: String.Encoding.utf8)!)
             if responseJson["info"]["number"].stringValue == ERROR_INFO["ACCOUNT_ERR"]?["number"] {
-                let alert = AlertController(title: "注册失败", message: "用户名已存在", preferredStyle: .alert)
+                let alert = AlertController(title: "注册失败", message: "账号已存在", preferredStyle: .alert)
                 alert.add(AlertAction(title: "确定", style: .preferred))
                 alert.present()
             }
-            print(responseJson)
             if responseJson["info"]["number"].stringValue == ERROR_INFO["SUCCESS"]?["number"] {
                 let alert = AlertController(title: "注册成功", message: "恭喜", preferredStyle: .alert)
                 alert.add(AlertAction(title: "进入音乐之旅", style: .preferred))
@@ -100,6 +99,9 @@ class RegisterViewController: UIViewController {
         }
     }
     
+    @IBAction func popNavigation(_ sender: UIBarButtonItem) {
+        let _ = self.navigationController?.popViewController(animated: true)
+    }
 
     /*
     // MARK: - Navigation

@@ -9,4 +9,5 @@ target 'Mathilda' do
   pod 'SDCAlertView', '~> 7.1'
   pod 'MBProgressHUD', '~> 1.0.0'
   pod 'SnapKit', '~> 3.0.2'
+  pod 'SwiftHEXColors'
 end
