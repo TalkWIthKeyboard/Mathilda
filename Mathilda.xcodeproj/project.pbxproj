@@ -13,6 +13,7 @@
 		2F1C5BB51DDA049700B8689E /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1C5BB41DDA049700B8689E /* Config.swift */; };
 		2F62AEA71DE7B658009FEA0E /* PeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F62AEA61DE7B658009FEA0E /* PeopleViewController.swift */; };
 		2F6ECEF81DDF4AE3007632A4 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6ECEF71DDF4AE3007632A4 /* RegisterViewController.swift */; };
+		2F6FAAB01DED58AF007578FA /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F6FAAAF1DED58AF007578FA /* MapKit.framework */; };
 		2FD185A71DBF0A3E0014274B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD185A61DBF0A3E0014274B /* AppDelegate.swift */; };
 		2FD185AC1DBF0A3E0014274B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FD185AA1DBF0A3E0014274B /* Main.storyboard */; };
 		2FD185AE1DBF0A3E0014274B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FD185AD1DBF0A3E0014274B /* Assets.xcassets */; };
@@ -27,6 +28,7 @@
 		2F1C5BB41DDA049700B8689E /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		2F62AEA61DE7B658009FEA0E /* PeopleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleViewController.swift; sourceTree = "<group>"; };
 		2F6ECEF71DDF4AE3007632A4 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		2F6FAAAF1DED58AF007578FA /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		2FD185A31DBF0A3D0014274B /* Mathilda.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mathilda.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FD185A61DBF0A3E0014274B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2FD185AB1DBF0A3E0014274B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -43,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F6FAAB01DED58AF007578FA /* MapKit.framework in Frameworks */,
 				ED74E48967888CE200FBDDC1 /* Pods_Mathilda.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -89,6 +92,7 @@
 		A711AFBBFAA4B0B09FFB2C83 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2F6FAAAF1DED58AF007578FA /* MapKit.framework */,
 				60316FC5DF31D369A0D82F6C /* Pods_Mathilda.framework */,
 			);
 			name = Frameworks;
@@ -141,6 +145,11 @@
 						DevelopmentTeam = G4WT85FFHH;
 						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};

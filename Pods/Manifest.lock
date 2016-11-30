@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (4.1.0)
+  - FSCalendar (2.5.1)
   - MBProgressHUD (1.0.0)
   - SnapKit (3.0.2)
   - SwiftHEXColors (1.1.0)
@@ -7,6 +8,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 4.0)
+  - FSCalendar
   - MBProgressHUD (~> 1.0.0)
   - SnapKit (~> 3.0.2)
   - SwiftHEXColors
@@ -14,11 +16,12 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   Alamofire: e266cf991b933498df791e645e0d8ac294492153
+  FSCalendar: 8efeb4b92240937204165c7743f4375923112fb5
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   SnapKit: 2e456761aa92d4d4067a7a5594c18769d451a8ad
   SwiftHEXColors: 8f7e364df7929e32cff9f9eeb044bb215167d6be
   SwiftyJSON: 38a8ea2006779c0fc4c310cb2ee8195327740faf
 
-PODFILE CHECKSUM: c9bd93373b2d3570cf4e9d79f478d106b40e5d9b
+PODFILE CHECKSUM: 545cd6a128aff333cda18feb8d8bbceac8d7b4fd
 
 COCOAPODS: 1.1.1

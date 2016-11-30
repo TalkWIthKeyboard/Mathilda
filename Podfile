@@ -9,4 +9,5 @@ target 'Mathilda' do
   pod 'MBProgressHUD', '~> 1.0.0'
   pod 'SnapKit', '~> 3.0.2'
   pod 'SwiftHEXColors'
+  pod 'FSCalendar'
 end
