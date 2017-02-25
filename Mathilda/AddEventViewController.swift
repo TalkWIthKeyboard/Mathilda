@@ -71,7 +71,7 @@ class AddEventViewController: UIViewController, UITableViewDelegate, UITableView
                 timeZone.textColor = UIColor(red: 136/255, green: 136/255, blue: 136/255, alpha: 1)
                 timeZone.text = "Shanghai"
                 cellView.addSubview(timeZone)
-                let chooseDetail = UIButton(frame: CGRect(x: 360 - 20, y: cellView.frame.midY - 20 / 2, width: 20 * 366 / 652, height:20))
+                let chooseDetail = UIButton(frame: CGRect(x: 360 - 20, y: cellView.frame.midY - 20 / 2, width: 40 * 366 / 652, height:20))
                 chooseDetail.setImage(#imageLiteral(resourceName: "more"), for: .normal)
                 cellView.addSubview(chooseDetail)
             default:
@@ -80,9 +80,10 @@ class AddEventViewController: UIViewController, UITableViewDelegate, UITableView
             cellView.addSubview(eventInfo)
         case 2:
             let eventInfo = UILabel(frame: CGRect(x: 15.0, y: 0.0, width: 345.0, height: 44.0))
-            let chooseDetail = UIButton(frame: CGRect(x: 360-20, y: cellView.frame.midY - 20 / 2, width: 20 * 366 / 652, height:20))
+            let chooseDetail = UIButton(frame: CGRect(x: 360-20, y: cellView.frame.midY - 20 / 2, width: 40 * 366 / 652, height:20))
             chooseDetail.setImage(#imageLiteral(resourceName: "more"), for: .normal)
             cellView.addSubview(chooseDetail)
+            //chooseDetail.addTarget(<#T##target: Any?##Any?#>, action: <#T##Selector#>, for: <#T##UIControlEvents#>)
             switch indexPath.row {
             case 0:
                 eventInfo.text = "Repeat"
