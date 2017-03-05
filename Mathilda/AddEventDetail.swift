@@ -8,10 +8,20 @@
 
 import UIKit
 import CoreLocation
+import MapKit
 
-class timeZoneDetailController: UITableViewController, CLLocationManagerDelegate {
+class addEventDetail: UIViewController, CLLocationManagerDelegate {
   let locationManager = CLLocationManager()
   let timeZoneDetailView = UITableView()
+  
+  override func viewWillAppear(_ animated: Bool) {
+    getLocation()
+    let mapView = MKMapView(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: 300))
+    view.addSubview(mapView)
+    mapView.showsUserLocation = true
+    mapView.userTrackingMode = .follow
+  }
+  
   func getLocation() {
     let status = CLLocationManager.authorizationStatus()
     if status == .notDetermined {
@@ -35,3 +45,4 @@ class timeZoneDetailController: UITableViewController, CLLocationManagerDelegate
     print("Error \(error)")
   }
 }
+
